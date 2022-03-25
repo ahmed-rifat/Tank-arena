@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Leopard-1V",
+    "img": "https://media.istockphoto.com/photos/leopard1v-tank-picture-id458804963",
+    "price": 460000
+  },
+  {
+    "id": 2,
+    "name": "T-90S",
+    "img": "https://media.istockphoto.com/photos/main-battle-tank-picture-id121143704",
+    "price": 560000
+  },
+  {
+    "id": 3,
+    "name": "M4 Sherman",
+    "img": "https://www.istockphoto.com/photo/legendary-m4-sherman-tank-gm157379927-7196316",
+    "price": 360000
+  },
+  {
+    "id": 4,
+    "name": "Soviet T-34",
+    "img": "https://media.istockphoto.com/photos/soviet-t34-tank-stands-in-bright-sun-on-a-clean-white-background-with-picture-id1277470522",
+    "price": 860000
+  },
+  {
+    "id": 5,
+    "name": "Leopard-1V tank",
+    "img": "https://media.istockphoto.com/photos/leopard1v-tank-picture-id458804963",
+    "price": 670000
+  },
+  {
+    "id": 6,
+    "name": "Howitzer",
+    "img": "https://www.istockphoto.com/photo/howitzer-gm96370861-6765495",
+    "price": 760000
+  },
+  {
+    "id": 7,
+    "name": "Heavy German Tiger",
+    "img": "https://media.istockphoto.com/photos/heavy-german-tiger-tank-from-wwii-picture-id1197896810",
+    "price": 560000
+  },
+  {
+    "id": 8,
+    "name": "M5 Stuart",
+    "img": "https://media.istockphoto.com/photos/world-war-2-tank-firing-weapon-on-battle-field-picture-id1314106760",
+    "price": 960000
+  },
+  {
+    "id": 9,
+    "name": "Merkava Mk II",
+    "img": "https://media.istockphoto.com/photos/israel-made-main-battle-tank-merkava-mk-iii-picture-id497283364",
+    "price": 870000
+  },
+  {
+    "id": 10,
+    "name": "destroyer",
+    "img": "https://media.istockphoto.com/photos/old-british-tank-destroyer-picture-id154973676",
+    "price": 223000
+  },
+  {
+    "id": 11,
+    "name": "tank T-55",
+    "img": "https://media.istockphoto.com/photos/old-tank-t55-picture-id174863244",
+    "price": 136000
+  },
+  {
+    "id": 12,
+    "name": "T-14 Armata",
+    "img": "https://media.istockphoto.com/photos/armata-russian-tank-picture-id491408074",
+    "price": 567800
+  }
+]
