@@ -1,8 +1,7 @@
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-### `Live netlify site`
-[tank-arena](https://react-icons.github.io/react-icons/search?q=cart)
+### `Tank-Arena_show`
+[Netlify Live site Link](https://tank-arena-show.netlify.app/)
 

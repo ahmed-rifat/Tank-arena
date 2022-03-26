@@ -7,6 +7,23 @@
   gap: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  .card-shape{
+    grid-template-columns: repeat(2,1fr);
+    order: 2;
+  }
+  .card-shape2{
+   order: 1;
+   
+  }
+
+  
+}
+
+@media screen {
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

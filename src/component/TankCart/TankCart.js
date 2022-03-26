@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './TankCart.css'
 
-const TankCart = ({cart, chooseAgain, randomChoose,chooseOne}) => {
+const TankCart = ({cart, chooseAgain, randomChoose, chooseOne}) => {
 
         return (
         <div className='sticky-top'>
@@ -24,14 +24,20 @@ const TankCart = ({cart, chooseAgain, randomChoose,chooseOne}) => {
             <hr/>
                     <div className='cart-item mt-2'>
                         
-                             <div><img id='mypic' src={chooseOne.img} alt="" /></div>
-                             <div><h4> {chooseOne.name}</h4></div>
+                             {
+                                 chooseOne.map(final=>(
+                                     <div key ={final.id}>
+                                         <div><img src={final.img} alt="" /></div>
+                                        <div><h4> {final.name}</h4></div>
+                                     </div>
+                                 ))
+                             }
                     </div> 
-                    <button className='text-info mt-4' onClick={()=>randomChoose(cart)}>Choose 1 for me</button>
+                    <button className='text-info mt-4' onClick={()=>randomChoose(cart)}>Choose one for me</button>
                     </div>
                     
                      
-                    <button onClick={chooseAgain} className='text-danger mt-2'>Choose Again</button>
+                    <button onClick={chooseAgain} className='text-danger mt-2'>Reset</button>
 
                     </div>
 

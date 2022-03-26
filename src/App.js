@@ -6,6 +6,7 @@ import TankCard from './component/TankCard/TankCard';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TankCart from './component/TankCart/TankCart';
+import Question from './component/Question/Question';
 
 
 
@@ -34,23 +35,23 @@ const chooseAgain=()=>{
 }
 const randomChoose=()=>{
  const randomItem = cart[Math.floor(Math.random() * cart.length)];
-      // document.getElementById('mypic').style.visibility('visible');
-  setChooseOne(randomItem);
+// console.log([randomItem]);
+ setChooseOne([randomItem]);
       
   }
 
   return (
     <div className="App">
      <Title></Title>
-          <div className='row'>
-           <div className='col-9 card-shape mt-4'>
+          <div className='row full-body'>
+           <div className='col-md-9 card-shape mt-4'>
            {
               tanks.map(tank=>(
                 <TankCard key={tank.id} tankData={tank} addToCart={addToCart}></TankCard>
               ))
             }
            </div>
-           <div className='col-3'>
+           <div className='col-md-3 card-shape2'>
                 {
                    
                      <TankCart chooseOne={chooseOne} randomChoose={randomChoose} chooseAgain={chooseAgain} 
@@ -61,7 +62,7 @@ const randomChoose=()=>{
            </div>
           </div>
 
-          
+          <Question></Question>
     </div>
   );
 }
