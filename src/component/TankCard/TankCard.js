@@ -1,23 +1,21 @@
 import React from 'react';
 import './TankCard.css'
+import { MdOutlineAddShoppingCart } from 'react-icons/md';
 
-const TankCard = (props) => {
+const TankCard = ({tankData, addToCart}) => {
     // console.log(props.tankData);
-    const {img,name, price}=props.tankData;
-    return (
-        <div className='card'>
+    const {img,name, price}=tankData;
 
-        
-        <img src={img} className="card-img-top" alt="..."/>
+   
+    return (
+       
+        <div className='card'>
+       <img src={img} className="card-img-top" alt="..."/>
         <div className="card-body">
             <h5 className="card-title">Name:{name}</h5>
             <p className="card-text">Price: {price}</p>
-            <button className='btn btn-primary'>Add to Cart</button>        </div>
-        
-            {/* <img src={img} alt="" />
-            <h1>Name: {name}</h1> */}
-            
-            
+            <button onClick={()=>addToCart(tankData)} className='btn btn-primary'>Add to Cart <MdOutlineAddShoppingCart/></button>       
+             </div>
            
         </div>
     );

@@ -11,6 +11,9 @@ import TankCart from './component/TankCart/TankCart';
 
 function App() {
   const [tanks, setTank]= useState([]);
+  const [cart, setCart] =useState([]);
+  // console.log(cart);
+
   // console.log(tanks);
 
   useEffect(()=>{
@@ -19,6 +22,10 @@ function App() {
     .then(data => setTank(data));
   },[])
 
+  const addToCart= (tank)=>{
+     setCart([...cart,tank]);
+}
+
   return (
     <div className="App">
      <Title></Title>
@@ -26,12 +33,17 @@ function App() {
            <div className='col-9 card-shape mt-4'>
            {
               tanks.map(tank=>(
-                <TankCard key={tank.id} tankData={tank}></TankCard>
+                <TankCard key={tank.id} tankData={tank} addToCart={addToCart}></TankCard>
               ))
             }
            </div>
            <div className='col-3'>
-                 <TankCart></TankCart>
+                {
+                   
+                     <TankCart cart={cart}></TankCart>
+                   
+                 
+                }
            </div>
           </div>
 
