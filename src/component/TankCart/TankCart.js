@@ -22,11 +22,11 @@ const TankCart = ({cart, chooseAgain, randomChoose, chooseOne}) => {
 
                     <div>
             <hr/>
-                    <div className='cart-item mt-2'>
+                    <div>
                         
                              {
                                  chooseOne.map(final=>(
-                                     <div key ={final.id}>
+                                     <div className='cart-item mt-2' key ={final.id}>
                                          <div><img src={final.img} alt="" /></div>
                                         <div><h4> {final.name}</h4></div>
                                      </div>
