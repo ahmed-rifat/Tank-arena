@@ -21,6 +21,7 @@ function App() {
     .then(res => res.json())
     .then(data => setTank(data));
   },[])
+  
 
   const addToCart= (tank)=>{
      setCart([...cart,tank]);
