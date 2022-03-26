@@ -12,23 +12,32 @@ import TankCart from './component/TankCart/TankCart';
 function App() {
   const [tanks, setTank]= useState([]);
   const [cart, setCart] =useState([]);
-  // console.log(cart);
-
-  // console.log(tanks);
+  const[chooseOne, setChooseOne] =useState([]);
 
   useEffect(()=>{
     fetch('tankshow.json')
     .then(res => res.json())
     .then(data => setTank(data));
-  },[])
-  
+  },[]);
 
-  const addToCart= (tank)=>{
-     setCart([...cart,tank]);
+const addToCart= (tank)=>{
+  // console.log(cart.length);
+  if(cart.length<=3){
+  setCart([...cart,tank]);       
+  }else{
+       alert("you can't add More than 4 Items");
+  }
 }
-const chooseAgain=(tank)=>{
-  setCart([],tank);
+const chooseAgain=()=>{
+  setCart([]);
+  setChooseOne([]);
 }
+const randomChoose=()=>{
+ const randomItem = cart[Math.floor(Math.random() * cart.length)];
+      // document.getElementById('mypic').style.visibility('visible');
+  setChooseOne(randomItem);
+      
+  }
 
   return (
     <div className="App">
@@ -44,7 +53,8 @@ const chooseAgain=(tank)=>{
            <div className='col-3'>
                 {
                    
-                     <TankCart chooseAgain={chooseAgain} cart={cart}></TankCart>
+                     <TankCart chooseOne={chooseOne} randomChoose={randomChoose} chooseAgain={chooseAgain} 
+                      cart={cart}></TankCart>
                    
                  
                 }
