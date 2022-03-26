@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './TankCart.css'
 
-const TankCart = ({cart}) => {
+const TankCart = ({cart, chooseAgain}) => {
     // console.log(cart);
     // const {name,img,id} =cart;
 
     const[chooseOne, setChooseOne] =useState([]);
-    console.log(chooseOne);
+    // console.log(chooseOne);
+
+    
 
     const randomChoose=()=>{
         const randomItem = cart[Math.floor(Math.random() * cart.length)];
@@ -29,16 +31,17 @@ const TankCart = ({cart}) => {
                         }
 
                     <div>
-                        <hr/>
-                    <div className='cart-item mt-2 shadow-lg p-3 mb-5 bg-white rounded'>
-                                 <div><img src={chooseOne.img} alt="" /></div>
-                                      <div><h4> {chooseOne.name}</h4></div>
-                              </div> 
+            <hr/>
+                    <div className='cart-item mt-2'>
+                        
+                             <div><img src={chooseOne.img} alt="" /></div>
+                             <div><h4> {chooseOne.name}</h4></div>
+                    </div> 
                     <button className='text-info mt-4' onClick={()=>randomChoose(cart)}>Choose 1 for me</button>
                     </div>
                     
                      
-                    <button className='text-danger mt-2'>Choose Again</button>
+                    <button onClick={chooseAgain} className='text-danger mt-2'>Choose Again</button>
 
                     </div>
 

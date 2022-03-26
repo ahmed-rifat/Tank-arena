@@ -26,6 +26,9 @@ function App() {
   const addToCart= (tank)=>{
      setCart([...cart,tank]);
 }
+const chooseAgain=(tank)=>{
+  setCart([],tank);
+}
 
   return (
     <div className="App">
@@ -41,7 +44,7 @@ function App() {
            <div className='col-3'>
                 {
                    
-                     <TankCart cart={cart}></TankCart>
+                     <TankCart chooseAgain={chooseAgain} cart={cart}></TankCart>
                    
                  
                 }
