@@ -3,6 +3,11 @@ import './App.css';
 import Title from './component/Title/Title';
 import { useEffect, useState } from 'react';
 import TankCard from './component/TankCard/TankCard';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import TankCart from './component/TankCart/TankCart';
+
+
 
 function App() {
   const [tanks, setTank]= useState([]);
@@ -17,13 +22,20 @@ function App() {
   return (
     <div className="App">
      <Title></Title>
-          <div>
-            {
+          <div className='row'>
+           <div className='col-9 card-shape mt-4'>
+           {
               tanks.map(tank=>(
                 <TankCard key={tank.id} tankData={tank}></TankCard>
               ))
             }
+           </div>
+           <div className='col-3'>
+                 <TankCart></TankCart>
+           </div>
           </div>
+
+          
     </div>
   );
 }

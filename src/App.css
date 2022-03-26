@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.card-shape{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
 
 .App-logo {
   height: 40vmin;
